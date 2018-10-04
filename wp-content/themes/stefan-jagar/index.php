@@ -65,13 +65,27 @@
             </section>
 
             <main id="content" role="main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-
+                <article class="post">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="post-title">Kronskogen, pass 7</h1>
+                                <div class="">
+                                    <div class="post-timestamp mr-3 d-flex flex-column justify-content-center align-items-center">
+                                        <time class="post-timestamp__date">8/10</time>
+                                        <time class="post-timestamp__time">08:55</time>
+                                    </div>
+                                    <p>
+                                        Jakten kan vara över, men det vet vi inte än. Just nu är det ingen jakt i väntan på skottplatsundersökning. Om det påskjutna djuret konstateras vara oskadat så fortsätter vi. Om det är träffat så måste vi få tag på det. Grannlaget underrättas om att en eventuellt påskjuten kviga kan vara på väg dit från vårt håll.
+                                    </p>
+                                    <p>
+                                        Hur som haver, att sitta och fika i vindstilla solsken under dels en klarblå himmel och dels under en knallgul björk skadar inte!
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </main>
 
         </div>

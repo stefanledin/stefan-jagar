@@ -1,0 +1,26 @@
+.post {
+    background: $vanilla;
+    border-bottom: 10px solid $dark-green;
+}
+.post-title {
+    color: $dark-brown;
+}
+
+.post-timestamp {
+    width: 65px;
+    height: 76px;
+    background: url('../img/shield.svg') no-repeat;
+    background-size: 65px;
+    display: block;
+    float: left;
+    time {
+        line-height: 1.2;
+    }
+}
+.post-timestamp__date {
+    font-size: 10px;
+}
+.post-timestamp__time {
+    font-size: 14px;
+    font-weight: 700;
+}

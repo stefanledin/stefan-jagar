@@ -91,6 +91,38 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/shield.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/shield.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/img/shield@1x.png": {
+		"ft": 32768,
+		"iS": 6360,
+		"oA": 0,
+		"oAP": "/assets/img/shield@1x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/shield@2x.png": {
+		"ft": 32768,
+		"iS": 13556,
+		"oA": 0,
+		"oAP": "/assets/img/shield@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/scss/_header.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -113,6 +145,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_live.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/scss/_post.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/_post.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1242,8 +1287,8 @@
 	"creationDate": 560246827.00250304,
 	"displayValue": "stefan-jagar",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-ceiling",
-	"iconImageWasSetByUser": 0
+	"iconImageName": "meme-cocaine",
+	"iconImageWasSetByUser": 1
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

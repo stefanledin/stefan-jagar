@@ -18,25 +18,33 @@ $dark-brown: #5A3E2E;
 $dark-green: #313528;
 $vanilla: #F7E8C8;
 
-$grid-breakpoints: (xs: 0,
-sm: 567,
-md: 768px,
-lg: 992px,
-xl: 1200px) !default;
-
 $body-bg: $light-brown;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 568px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$font-family-base: 'Georgia', serif;
+
 
 /**
  *
  * Imports
  *
  */
+ 
+ /* Bootstrap */
 @import './bootstrap/reboot';
 @import './bootstrap/grid';
 @import './bootstrap/utilities';
 @import './bootstrap/type';
+
+/* Custom */
 @import './header';
 @import './live';
+@import './post';
 
 img {
     max-width: 100%;

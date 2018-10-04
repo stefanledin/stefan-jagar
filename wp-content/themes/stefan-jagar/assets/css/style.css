@@ -13,6 +13,7 @@
  * Imports
  *
  */
+/* Bootstrap */
 *,
 *::before,
 *::after {
@@ -34,7 +35,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Georgia", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -282,7 +283,7 @@ template {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
-  @media (min-width: 576px) {
+  @media (min-width: 568px) {
     .container {
       max-width: 540px; } }
   @media (min-width: 768px) {
@@ -464,7 +465,7 @@ template {
 .offset-11 {
   margin-left: 91.6666666667%; }
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
   .col-sm {
     flex-basis: 0;
     flex-grow: 1;
@@ -1066,7 +1067,7 @@ button.bg-dark:focus {
 .d-inline-flex {
   display: inline-flex !important; }
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
   .d-sm-none {
     display: none !important; }
   .d-sm-inline {
@@ -1302,7 +1303,7 @@ button.bg-dark:focus {
 .align-self-stretch {
   align-self: stretch !important; }
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
   .flex-sm-row {
     flex-direction: row !important; }
   .flex-sm-column {
@@ -1591,7 +1592,7 @@ button.bg-dark:focus {
 .float-none {
   float: none !important; }
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
   .float-sm-left {
     float: left !important; }
   .float-sm-right {
@@ -1971,7 +1972,7 @@ button.bg-dark:focus {
 .mx-auto {
   margin-left: auto !important; }
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
   .m-sm-0 {
     margin: 0 !important; }
   .mt-sm-0,
@@ -2730,7 +2731,7 @@ button.bg-dark:focus {
 .text-center {
   text-align: center !important; }
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
   .text-sm-left {
     text-align: left !important; }
   .text-sm-right {
@@ -2953,6 +2954,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
+/* Custom */
 .site-header {
   background: #5A3E2E; }
 
@@ -2975,6 +2977,30 @@ mark,
     line-height: 1.2; }
   .live img {
     max-width: 40px; }
+
+.post {
+  background: #F7E8C8;
+  border-bottom: 10px solid #313528; }
+
+.post-title {
+  color: #5A3E2E; }
+
+.post-timestamp {
+  width: 65px;
+  height: 76px;
+  background: url("../img/shield.svg") no-repeat;
+  background-size: 65px;
+  display: block;
+  float: left; }
+  .post-timestamp time {
+    line-height: 1.2; }
+
+.post-timestamp__date {
+  font-size: 10px; }
+
+.post-timestamp__time {
+  font-size: 14px;
+  font-weight: 700; }
 
 img {
   max-width: 100%;
