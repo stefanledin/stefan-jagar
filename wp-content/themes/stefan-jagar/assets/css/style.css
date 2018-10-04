@@ -8,6 +8,15 @@
  * Variables
  *
  */
+.bg-dark-green {
+  background-color: #313528; }
+
+.bg-medium-green {
+  background-color: #6F7545; }
+
+.bg-light-green {
+  background-color: #B7BC77; }
+
 /**
  *
  * Imports
@@ -2959,7 +2968,7 @@ mark,
   background: #5A3E2E; }
 
 .site-title {
-  margin: .3rem 0;
+  margin: 0;
   font-size: 32px;
   text-align: center;
   color: #F7E8C8;
@@ -2969,7 +2978,8 @@ mark,
     font-size: 18px; }
 
 .live {
-  background: #313528;
+  background: #6F7545;
+  font-size: 80%;
   color: #F7E8C8; }
   .live h2 {
     margin: 0; }
@@ -2982,7 +2992,27 @@ mark,
   background: #F7E8C8;
   border-bottom: 10px solid #313528; }
 
+.post-thumbnail {
+  position: relative;
+  overflow: hidden; }
+  .post-thumbnail img {
+    position: relative;
+    margin: 10% auto 0;
+    width: 80%;
+    display: block; }
+
+.post-thumbnail__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -5% 0 0 -5%;
+  width: 110%;
+  height: 110%;
+  filter: blur(1rem);
+  background-size: cover; }
+
 .post-title {
+  font-size: 2rem;
   color: #5A3E2E; }
 
 .post-timestamp {
@@ -2991,7 +3021,8 @@ mark,
   background: url("../img/shield.svg") no-repeat;
   background-size: 65px;
   display: block;
-  float: left; }
+  float: left;
+  line-height: 1; }
   .post-timestamp time {
     line-height: 1.2; }
 
@@ -3001,6 +3032,28 @@ mark,
 .post-timestamp__time {
   font-size: 14px;
   font-weight: 700; }
+
+ul {
+  padding-left: 1.5rem; }
+
+.embed {
+  position: relative;
+  padding: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  /* 4:3 aspect ratio its padding-bottom: 75% */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 2em; }
+
+.embed iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 img {
   max-width: 100%;

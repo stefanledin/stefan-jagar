@@ -52,3 +52,19 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 function asset( $path ) {
     return get_bloginfo('template_directory') . '/assets/' . $path;
 }
+
+/**
+ * Helper for getting the URL to a thumbnail
+ */
+function get_thumbnail_url( $post_id, $size = null ) {
+    $imageObject = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size );
+    return $imageObject[0];
+}
+
+/**
+ * Wrappar YouTube-embeds med div.embed.
+ */
+function wrap_embed_with_div( $html, $url, $attr ) {
+    return '<div class="embed">' . $html . '</div>';
+}
+add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
