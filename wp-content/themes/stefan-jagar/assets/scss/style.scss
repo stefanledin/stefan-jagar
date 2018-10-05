@@ -32,14 +32,23 @@ $vanilla: #F7E8C8;
     background-color: $light-green;
 }
 
+.bg-vanilla {
+    background-color: $vanilla !important;
+}
+
+.text-dark-brown {
+    color: $dark-brown !important;
+}
+
 $body-bg: $light-brown;
-$grid-breakpoints: (xs: 0,
-sm: 568px,
-md: 768px,
-lg: 992px,
-xl: 1200px);
-$font-family-base: 'Georgia',
-serif;
+$grid-breakpoints: (
+    xs: 0,
+    sm: 568px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+$font-family-base: 'Georgia', serif;
 
 
 /**
@@ -62,4 +71,11 @@ serif;
 img {
     max-width: 100%;
     height: auto;
+}
+
+.icon {
+    width: 80px;
+    height: 100px;
+    background: url('../img/icon.svg') no-repeat;
+    background-size: 80px;
 }

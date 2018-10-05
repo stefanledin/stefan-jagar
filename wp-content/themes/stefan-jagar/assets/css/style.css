@@ -17,6 +17,12 @@
 .bg-light-green {
   background-color: #B7BC77; }
 
+.bg-vanilla {
+  background-color: #F7E8C8 !important; }
+
+.text-dark-brown {
+  color: #5A3E2E !important; }
+
 /**
  *
  * Imports
@@ -3059,5 +3065,11 @@ ul {
 img {
   max-width: 100%;
   height: auto; }
+
+.icon {
+  width: 80px;
+  height: 100px;
+  background: url("../img/icon.svg") no-repeat;
+  background-size: 80px; }
 
 /*# sourceMappingURL=style.css.map */

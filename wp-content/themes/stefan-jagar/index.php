@@ -20,7 +20,7 @@
             </header>
 
             <section class="live">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="bg-medium-green col-12 col-sm-4">
                             <h2 class="live-header h5 mb-1">8/10 – Live!</h2>
@@ -32,14 +32,18 @@
                                 <li>13:25 – Drevet avslutat</li>
                             </ol>
                         </div>
-                        <div class="bg-light-green col-12 col-sm-4">
-                            <h2 class="h5">Var är Stefan?</h2>
+                        <div class="bg-vanilla col-12 col-sm-4">
+                            <h2 class="h5 text-dark-brown">Var är Stefan?</h2>
                         </div>
                         <div class="bg-dark-green col-12 col-sm-4">
                             <h2 class="h5">Statistik</h2>
-                            <ul class="d-flex flex-wrap justify-content-around m-0 p-0 list-unstyled">
+                            <ul class="d-flex flex-wrap justify-content-between m-0 p-0 list-unstyled">
                                 <li class="p-1 d-flex flex-column align-items-center">
-                                    <img class="mb-1" src="<?php echo asset('img/icon-coffee.png');?>" width="87" height="100" alt="Fikat">
+                                    <figure class="icon">
+                                        <?php
+                                        echo file_get_contents(__DIR__.'/assets/img/icon-coffee.svg');
+                                        ?>
+                                    </figure>
                                     <span class="text-center">Fikat:<br>0 ggr</span>
                                 </li>
                                 <li class="p-1 d-flex flex-column align-items-center">

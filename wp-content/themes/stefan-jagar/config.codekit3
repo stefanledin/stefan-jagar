@@ -58,6 +58,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/icon-coffee.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-coffee.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/img/icon-extra.png": {
 		"ft": 32768,
 		"iS": 9460,
@@ -68,6 +78,16 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/img/icon-eye.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-eye.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/assets/img/icon-map.png": {
 		"ft": 32768,
@@ -80,6 +100,26 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/icon-map.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-map.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/img/icon-moose.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-moose.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/assets/img/icon-small.png": {
 		"ft": 32768,
 		"iS": 11063,
@@ -90,6 +130,26 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/assets/img/icon-time.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-time.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/assets/img/icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/assets/img/shield.svg": {
 		"ft": 2097152,
