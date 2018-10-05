@@ -3013,7 +3013,8 @@ mark,
 
 .post-title {
   font-size: 2rem;
-  color: #5A3E2E; }
+  color: #5A3E2E;
+  overflow-wrap: break-word; }
 
 .post-timestamp {
   width: 65px;
