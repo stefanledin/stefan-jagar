@@ -1,0 +1,30 @@
+.icon {
+    margin-bottom: 0.5rem;
+    width: 65px;
+    height: 75px;
+    background: url('../img/icon.svg') no-repeat;
+    background-size: 65px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        max-width: 35px;
+    }
+    path {
+        fill: $dark-brown;
+    }
+}
+.icon--coffee svg {
+    position: relative;
+    right: -3px;
+}
+.icon--adults svg {
+    max-width: 43px;
+}
+.icon--small svg {
+    max-width: 27px;
+}
+.icon--extra svg {
+    max-width: 30px;
+}

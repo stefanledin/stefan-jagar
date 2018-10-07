@@ -20,6 +20,27 @@ $medium-green: #6F7545;
 $light-green: #B7BC77;
 $vanilla: #F7E8C8;
 
+
+/**
+ *
+ * Override Bootstrap variables
+ *
+ */
+$body-bg: $light-brown;
+$grid-breakpoints: (
+    xs: 0,
+    sm: 568px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+$font-family-base: 'Georgia', serif;
+
+/**
+ *
+ * Colors
+ *
+ */
 .bg-dark-green {
     background-color: $dark-green;
 }
@@ -40,17 +61,6 @@ $vanilla: #F7E8C8;
     color: $dark-brown !important;
 }
 
-$body-bg: $light-brown;
-$grid-breakpoints: (
-    xs: 0,
-    sm: 568px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px
-);
-$font-family-base: 'Georgia', serif;
-
-
 /**
  *
  * Imports
@@ -64,6 +74,7 @@ $font-family-base: 'Georgia', serif;
 @import './bootstrap/type';
 
 /* Custom */
+@import './icons';
 @import './header';
 @import './live';
 @import './post';
@@ -71,11 +82,4 @@ $font-family-base: 'Georgia', serif;
 img {
     max-width: 100%;
     height: auto;
-}
-
-.icon {
-    width: 80px;
-    height: 100px;
-    background: url('../img/icon.svg') no-repeat;
-    background-size: 80px;
 }

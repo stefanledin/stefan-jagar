@@ -8,6 +8,16 @@
  * Variables
  *
  */
+/**
+ *
+ * Override Bootstrap variables
+ *
+ */
+/**
+ *
+ * Colors
+ *
+ */
 .bg-dark-green {
   background-color: #313528; }
 
@@ -2970,6 +2980,34 @@ mark,
     content: "\2014 \00A0"; }
 
 /* Custom */
+.icon {
+  margin-bottom: 0.5rem;
+  width: 65px;
+  height: 75px;
+  background: url("../img/icon.svg") no-repeat;
+  background-size: 65px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .icon svg {
+    max-width: 35px; }
+  .icon path {
+    fill: #5A3E2E; }
+
+.icon--coffee svg {
+  position: relative;
+  right: -3px; }
+
+.icon--adults svg {
+  max-width: 43px; }
+
+.icon--small svg {
+  max-width: 27px; }
+
+.icon--extra svg {
+  max-width: 30px; }
+
 .site-header {
   background: #5A3E2E; }
 
@@ -3065,11 +3103,5 @@ ul {
 img {
   max-width: 100%;
   height: auto; }
-
-.icon {
-  width: 80px;
-  height: 100px;
-  background: url("../img/icon.svg") no-repeat;
-  background-size: 80px; }
 
 /*# sourceMappingURL=style.css.map */

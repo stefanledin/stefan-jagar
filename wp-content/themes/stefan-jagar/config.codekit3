@@ -26,38 +26,6 @@
 		"oAP": "/assets/css/style.css.map",
 		"oF": 0
 		},
-	"/assets/img/icon-adults.png": {
-		"ft": 32768,
-		"iS": 5693,
-		"oA": 0,
-		"oAP": "/assets/img/icon-adults.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/assets/img/icon-adults.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/icon-adults.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/img/icon-coffee.png": {
-		"ft": 32768,
-		"iS": 11533,
-		"oA": 0,
-		"oAP": "/assets/img/icon-coffee.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/assets/img/icon-coffee.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -68,16 +36,15 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/assets/img/icon-extra.png": {
-		"ft": 32768,
-		"iS": 9460,
-		"oA": 0,
-		"oAP": "/assets/img/icon-extra.png",
+	"/assets/img/icon-extra.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/assets/img/icon-extra.svg",
 		"oF": 0,
-		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
-		"q": 100
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/assets/img/icon-eye.svg": {
 		"ft": 2097152,
@@ -88,17 +55,6 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
-		},
-	"/assets/img/icon-map.png": {
-		"ft": 32768,
-		"iS": 12807,
-		"oA": 0,
-		"oAP": "/assets/img/icon-map.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
 		},
 	"/assets/img/icon-map.svg": {
 		"ft": 2097152,
@@ -120,17 +76,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/assets/img/icon-small.png": {
-		"ft": 32768,
-		"iS": 11063,
-		"oA": 0,
-		"oAP": "/assets/img/icon-small.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/assets/img/icon-time.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -151,38 +96,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/assets/img/shield.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/assets/img/shield.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/assets/img/shield@1x.png": {
-		"ft": 32768,
-		"iS": 6360,
-		"oA": 0,
-		"oAP": "/assets/img/shield@1x.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/assets/img/shield@2x.png": {
-		"ft": 32768,
-		"iS": 13556,
-		"oA": 0,
-		"oAP": "/assets/img/shield@2x.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
 	"/assets/scss/_header.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -192,6 +105,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/assets/scss/_icons.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/css/_icons.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
