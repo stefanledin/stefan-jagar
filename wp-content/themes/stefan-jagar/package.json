@@ -1,0 +1,20 @@
+{
+  "name": "stefan-jagar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "prod": "webpack",
+    "watch": "webpack -w -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "lazysizes": "^4.1.4"
+  }
+}

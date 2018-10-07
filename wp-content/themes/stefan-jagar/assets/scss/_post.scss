@@ -7,8 +7,9 @@
     overflow: hidden;
     img {
         position: relative;
-        margin: 10% auto 0;
-        width: 80%;
+        margin: 5% auto 0;
+        max-width: 1110px;
+        width: 95%;
         display: block;
     }
 }
@@ -23,15 +24,18 @@
     background-size: cover;
 }
 .post-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: $dark-brown;
     overflow-wrap: break-word;
+    @include media-breakpoint-up(md) {
+        font-size: 2.5rem;
+    }
 }
 
 .post-timestamp {
     width: 65px;
     height: 76px;
-    background: url('../img/shield.svg') no-repeat;
+    background: url('../img/icon.svg') no-repeat;
     background-size: 65px;
     display: block;
     float: left;
@@ -42,13 +46,25 @@
 }
 .post-timestamp__date {
     font-size: 10px;
+    @include media-breakpoint-up(md) {
+        font-size: 12px;
+    }
 }
 .post-timestamp__time {
     font-size: 14px;
     font-weight: 700;
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
 }
 
-ul {
+.post-content {
+    font-size: 1rem;
+    @include media-breakpoint-up(md) {
+        font-size: 1.3rem;
+    }
+}
+.post-content ul {
     padding-left: 1.5rem;
 }
 

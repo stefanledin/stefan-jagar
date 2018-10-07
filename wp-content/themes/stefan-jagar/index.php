@@ -115,21 +115,35 @@
                                 <?php
                                 echo sprintf(
                                     '<div class="post-thumbnail__background" style="background-image: url(%s)"></div>',
-                                    get_thumbnail_url($post->ID, 'thumbnail')
+                                    get_thumbnail_url( $post->ID, 'placeholder' )
                                 );
-                                the_post_thumbnail();
+                                $thumbnail_meta = wp_get_attachment_metadata( get_post_thumbnail_id() );
+                                echo sprintf(
+                                    '<img class="lazyload" src="%s" data-srcset="%s" sizes="100vw" width="%s" height="%s">',
+                                    get_thumbnail_url( $post->ID, 'placeholder' ),
+                                    wp_calculate_image_srcset(
+                                        array( $thumbnail_meta['width'], $thumbnail_meta['height'] ),
+                                        get_thumbnail_url( $post->ID, 'thumbnail' ),
+                                        $thumbnail_meta,
+                                        get_post_thumbnail_id()
+                                    ),
+                                    $thumbnail_meta['width'],
+                                    $thumbnail_meta['height']
+                                );
                                 ?>
                             </figure>
                         <?php endif;?>
                         <div class="container">
                             <div class="row">
-                                <div class="col pt-2 pb-2">
+                                <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2 pb-2">
                                     <h1 class="post-title"><?php the_title();?></h1>
                                     <time class="post-timestamp mb-2 mr-3 d-flex flex-column justify-content-center align-items-center" datetime="<?php the_time('Y-m-d H:j')?>">
-                                        <span class="post-timestamp__date">8/10</span>    
-                                        <span class="post-timestamp__time">08:55</span>
+                                        <span class="post-timestamp__date"><?php the_time('j/n');?></span>    
+                                        <span class="post-timestamp__time"><?php the_time('H:i');?></span>
                                     </time>
-                                    <?php the_content();?>
+                                    <div class="post-content">
+                                        <?php the_content();?>
+                                    </div>
                                 </div>
                             </div>
                         </div>

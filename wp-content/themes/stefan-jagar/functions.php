@@ -32,6 +32,8 @@ function enqueue_styles_and_scripts() {
      */
     wp_deregister_script('wp-embed');
     wp_deregister_script('jquery');
+
+    wp_enqueue_script( 'app', $assetsDir.'/js/dist/bundle.js', null, bust_cache('/js/dist/bundle.js'), true );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_styles_and_scripts' );
 
@@ -39,6 +41,11 @@ function bust_cache( $file_name ) {
     $assetsPath = get_stylesheet_directory() . '/assets';
     return filemtime($assetsPath . $file_name);
 }
+
+/**
+ * Custom image sizes
+ */
+add_image_size( 'placeholder', 100, null, false );
 
 /**
  * Remove emojis
