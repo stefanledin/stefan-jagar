@@ -7,6 +7,12 @@
 @import './bootstrap/variables';
 @import './bootstrap/mixins';
 
+@mixin aladin {
+    .wf-aladin-n4-active & {
+        font-family: 'Aladin';
+        @content;
+    }
+}
 
 /**
  *
@@ -82,4 +88,11 @@ $font-family-base: 'Georgia', serif;
 img {
     max-width: 100%;
     height: auto;
+}
+
+a, a:visited {
+    color: $dark-green;
+}
+a:hover {
+    color: $medium-green;
 }

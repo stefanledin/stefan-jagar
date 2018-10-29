@@ -9,6 +9,29 @@
 	],
 "creatorBuild": "28901",
 "files": {
+	"/.babelrc": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/.babelrc",
+		"oF": 0
+		},
+	"/acf-json/group_5bba45eabf123.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5bba45eabf123-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/acf-json/group_5bba5331c8a6d.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/acf-json/group_5bba5331c8a6d-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/assets/css/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -25,6 +48,17 @@
 		"oA": 0,
 		"oAP": "/assets/css/style.css.map",
 		"oF": 0
+		},
+	"/assets/img/favicon.png": {
+		"ft": 32768,
+		"iS": 15806,
+		"oA": 0,
+		"oAP": "/assets/img/favicon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/assets/img/icon-coffee.svg": {
 		"ft": 2097152,
@@ -106,12 +140,52 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"/assets/js/dist/Counter.bundle.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/dist/min/Counter.bundle-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/assets/js/dist/main.bundle.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/dist/min/main.bundle-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/assets/js/dist/vendors~Counter.bundle.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/dist/min/vendors~Counter.bundle-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
 	"/assets/js/src/app.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/assets/js/src/min/app-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/assets/js/src/Counter.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/assets/js/src/min/Counter-min.js",
 		"oF": 1,
 		"sC": 0,
 		"tS": 0
@@ -1306,6 +1380,20 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/partials/live-active.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/partials/live-active.php",
+		"oF": 0
+		},
+	"/partials/live-inactive.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/partials/live-inactive.php",
+		"oF": 0
+		},
 	"/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1316,14 +1404,34 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/webpack.config.js": {
+	"/webpack.common.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/min/webpack.config-min.js",
+		"oAP": "/min/webpack.common-min.js",
 		"oF": 1,
-		"sC": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/webpack.dev.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/min/webpack.dev-min.js",
+		"oF": 1,
+		"sC": 0,
+		"tS": 0
+		},
+	"/webpack.prod.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/min/webpack.prod-min.js",
+		"oF": 1,
+		"sC": 0,
 		"tS": 0
 		}
 	},

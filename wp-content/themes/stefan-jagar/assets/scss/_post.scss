@@ -30,6 +30,7 @@
     @include media-breakpoint-up(md) {
         font-size: 2.5rem;
     }
+    @include aladin;
 }
 
 .post-timestamp {
@@ -87,4 +88,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+.blur-up {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms;
+}
+
+.blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
 }

@@ -3021,6 +3021,8 @@ mark,
   .site-title span {
     display: block;
     font-size: 18px; }
+  .wf-aladin-n4-active .site-title {
+    font-family: 'Aladin'; }
 
 .live {
   background: #6F7545;
@@ -3028,6 +3030,8 @@ mark,
   color: #F7E8C8; }
   .live h2 {
     margin: 0; }
+    .wf-aladin-n4-active .live h2 {
+      font-family: 'Aladin'; }
   .live span {
     line-height: 1.2; }
   .live img {
@@ -3064,6 +3068,8 @@ mark,
   @media (min-width: 768px) {
     .post-title {
       font-size: 2.5rem; } }
+  .wf-aladin-n4-active .post-title {
+    font-family: 'Aladin'; }
 
 .post-timestamp {
   width: 65px;
@@ -3117,8 +3123,23 @@ mark,
   width: 100%;
   height: 100%; }
 
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms; }
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0); }
+
 img {
   max-width: 100%;
   height: auto; }
+
+a, a:visited {
+  color: #313528; }
+
+a:hover {
+  color: #6F7545; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="<?php echo asset('img/favicon.png');?>">
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
@@ -23,31 +24,52 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="bg-medium-green col-12 col-sm-6 col-lg-4">
-                            <h2 class="live-header h3 mt-2 mb-2">Dag 1 | Måndag 8/10</h2>
-                            <ol class="list-unstyled">
-                                <li class="h5">16:30 – Jakten avslutad</li>
-                                <li>15:00 – Styckning</li>
-                                <li>14:00 – Drar älgarna ur skogen</li>
-                                <li>13:45 – Samling</li>
-                                <li>13:25 – Drevet avslutat</li>
-                            </ol>
+                            <?php
+                            $hunting_day = get_posts( array(
+                                'post_type' => 'hunting_day',
+                                'posts_per_page' => 1
+                            ) );
+                            if ( $hunting_day ) : $hunting_day = $hunting_day[0];
+                            ?>
+                                <h2 class="live-header h3 mt-2 mb-2"><?php echo $hunting_day->post_title;?></h2>
+                                <?php if ( $events = get_field('hunting_day_events', $hunting_day->ID) ) : ?>
+                                    <ol class="list-unstyled">
+                                        <?php
+                                        $events = array_reverse( $events );
+                                        foreach ( $events as $index => $event ) {
+                                            echo sprintf(
+                                                '<li class="%s">%s – %s</li>',
+                                                ( $index == 0 ) ? 'h5' : '',
+                                                $event['time'],
+                                                $event['event']
+                                            );
+                                        }
+                                        ?>
+                                    </ol>
+                                <?php endif;?>
+                            <?php endif;?>
                         </div>
                         <div class="bg-vanilla text-dark-brown col-12 col-sm-6 col-lg-4">
                             <div class="d-flex justify-content-between">
-                                <div>
-                                    <h2 class="live-header h3 mt-2 mb-2">Live!</h2>
-                                    <ul class="list-unstyled h5">
-                                    <li><strong>Drev:</strong> Nordlinjen</li>
-                                    <li><strong>Pass:</strong> 8</li>
-                                    <li><strong>Tid:</strong> 2:25:30</li>
-                                    </ul>
-                                </div>
-                                <a href="#" class="d-flex mt-2 flex-column align-items-center h6">
-                                    <figure class="icon icon--map">
-                                        <?php echo file_get_contents(__DIR__.'/assets/img/icon-map.svg');?>
-                                    </figure>
-                                    <span class="text-center">Hitta till Stefan</span>
-                                </a>
+                                <?php
+                                $current_hunt = get_field('hunting_day_hunts', $hunting_day->ID);
+                                if ( $current_hunt ) {
+                                    $current_hunt = array_filter( $current_hunt, function( $hunt ) {
+                                        if ( empty( $hunt['end_time'] ) ) {
+                                            return $hunt;
+                                        }
+                                    } );
+                                    $current_hunt = array_shift($current_hunt);
+                                    if ( $current_hunt ) {
+                                        $live_status = 'active';
+                                    } else {
+                                        $live_status = 'inactive';
+                                    }
+                                } else {
+                                    $live_status = 'inactive';
+                                }
+                                include 'partials/live-' . $live_status . '.php';
+                                ?>
                             </div>
                         </div>
                         <div class="bg-dark-green col-12 col-lg-4">
@@ -59,8 +81,10 @@
                                         echo file_get_contents(__DIR__.'/assets/img/icon-coffee.svg');
                                         ?>
                                     </figure>
-                                    <span class="text-center">Fikat:<br>0 ggr</span>
+                                    <span class="text-center">Fikat:<br><?php the_field('stats_coffee', 'option');?> ggr</span>
                                 </li>
+                                <!--
+                                JAG HANN INTE
                                 <li class="p-1 d-flex flex-column align-items-center">
                                     <figure class="icon icon--total-time">
                                         <?php
@@ -69,13 +93,14 @@
                                     </figure>
                                     <span class="text-center">Tid på pass:<br>0 h 0 min</span>
                                 </li>
+                                -->
                                 <li class="p-1 d-flex flex-column align-items-center">
                                     <figure class="icon icon--observations">
                                         <?php
                                         echo file_get_contents(__DIR__.'/assets/img/icon-eye.svg');
                                         ?>
                                     </figure>
-                                    <span class="text-center">Observationer:<br>0</span>
+                                    <span class="text-center">Observationer:<br><?php the_field('stats_observations', 'option');?></span>
                                 </li>
                                 <li class="p-1 d-flex flex-column align-items-center">
                                     <figure class="icon icon--adults">
@@ -83,7 +108,7 @@
                                         echo file_get_contents(__DIR__.'/assets/img/icon-moose.svg');
                                         ?>
                                     </figure>
-                                    <span class="text-center">Vuxna:<br>0/0</span>
+                                    <span class="text-center">Vuxna:<br><?php the_field('stats_adults', 'option');?></span>
                                 </li>
                                 <li class="p-1 d-flex flex-column align-items-center">
                                     <figure class="icon icon--small">
@@ -91,16 +116,18 @@
                                         echo file_get_contents(__DIR__.'/assets/img/icon-moose.svg');
                                         ?>
                                     </figure>
-                                    <span class="text-center">Kalvar:<br>0/0</span>
+                                    <span class="text-center">Kalvar:<br><?php the_field('stats_small', 'option')?></span>
                                 </li>
-                                <li class="p-1 d-flex flex-column align-items-center">
-                                    <figure class="icon icon--extra">
-                                        <?php
-                                        echo file_get_contents(__DIR__.'/assets/img/icon-extra.svg');
-                                        ?>
-                                    </figure>
-                                    <span class="text-center">Extratilldelning:<br>0/0+0/0</span>
-                                </li>
+                                <?php if ( $extra = get_field('stats_extra', 'option') ) : ?>
+                                    <li class="p-1 d-flex flex-column align-items-center">
+                                        <figure class="icon icon--extra">
+                                            <?php
+                                            echo file_get_contents(__DIR__.'/assets/img/icon-extra.svg');
+                                            ?>
+                                        </figure>
+                                        <span class="text-center">Extratilldelning:<br><?php echo $extra;?></span>
+                                    </li>
+                                <?php endif;?>
                             </ul>
                         </div>
                     </div>
@@ -119,7 +146,7 @@
                                 );
                                 $thumbnail_meta = wp_get_attachment_metadata( get_post_thumbnail_id() );
                                 echo sprintf(
-                                    '<img class="lazyload" src="%s" data-srcset="%s" sizes="100vw" width="%s" height="%s">',
+                                    '<img class="lazyload blur-up" src="%s" data-srcset="%s" sizes="(min-width: 1110px) 1110px, 100vw" width="%s" height="%s">',
                                     get_thumbnail_url( $post->ID, 'placeholder' ),
                                     wp_calculate_image_srcset(
                                         array( $thumbnail_meta['width'], $thumbnail_meta['height'] ),

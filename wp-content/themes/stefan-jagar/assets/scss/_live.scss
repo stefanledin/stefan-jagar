@@ -5,6 +5,7 @@
     color: $vanilla;
     h2 {
         margin: 0;
+        @include aladin;
     }
     span {
         line-height: 1.2;
